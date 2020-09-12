@@ -1,2 +1,2 @@
-# chickichicki
-A NestJS based content management system
+# Chickichiki
+A NestJS based headless Content Management System
