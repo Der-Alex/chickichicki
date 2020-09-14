@@ -1,7 +1,7 @@
 import { HtmlBaseContentType } from './html-base-content-type';
 import { ImageBaseContentType } from './image-base-content-type';
 import { TextBaseContentType } from './text-base-content-type';
-import { BaseContentTypeInterface } from './interfaces/base-content-type.interface';
+import { BaseContentTypeInterface } from 'chickichicki-shared-interfaces';
 
 /**
  * TODO: Find a better way to show all the content types by calling a controller...

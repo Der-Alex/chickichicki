@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { baseContentTypes } from './base-content-types/base-content-types';
 import { CreateContentTypeDto } from './dto/create-content-type.dto';
-import { BaseContentTypeInterface } from './base-content-types/interfaces/base-content-type.interface';
+import { BaseContentTypeInterface } from 'chickichicki-shared-interfaces';
 
 @Injectable()
 export class ContentTypesService {

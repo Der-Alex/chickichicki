@@ -1,5 +1,5 @@
-import { ImageInterface } from './interfaces/image.interface';
 import { BaseContentType } from './base-content-type';
+import { ImageInterface } from 'chickichicki-shared-interfaces';
 
 export class ImageBaseContentType extends BaseContentType implements ImageInterface {
   name: string;

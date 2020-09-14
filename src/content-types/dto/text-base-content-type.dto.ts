@@ -1,6 +1,6 @@
 import { BaseContentTypeDto } from './base-content-type.dto';
 import { IsNotEmpty, IsString } from 'class-validator';
-import { TextInterface } from '../base-content-types/interfaces/text.interface';
+import { TextInterface } from 'chickichicki-shared-interfaces';
 
 export class TextBaseContentTypeDto extends BaseContentTypeDto implements TextInterface {
   @IsNotEmpty()

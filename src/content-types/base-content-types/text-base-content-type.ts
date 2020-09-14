@@ -1,5 +1,5 @@
-import { TextInterface } from './interfaces/text.interface';
 import { BaseContentType } from './base-content-type';
+import { TextInterface } from 'chickichicki-shared-interfaces';
 
 export class TextBaseContentType extends BaseContentType implements TextInterface {
   name: string;

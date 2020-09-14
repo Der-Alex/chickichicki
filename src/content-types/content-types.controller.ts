@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post, ValidationPipe } from '@nestjs/common';
 import { ContentTypesService } from './content-types.service';
 import { CreateContentTypeDto } from './dto/create-content-type.dto';
-import { BaseContentTypeInterface } from './base-content-types/interfaces/base-content-type.interface';
+import { BaseContentTypeInterface } from 'chickichicki-shared-interfaces';
 
 @Controller('content-types')
 export class ContentTypesController {

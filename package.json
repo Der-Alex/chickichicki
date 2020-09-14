@@ -43,6 +43,7 @@
     "typeorm": "^0.2.26"
   },
   "devDependencies": {
+    "chickichicki-shared-interfaces": "git+https://github.com/Der-Alex/chickichicki-shared-interfaces.git",
     "@nestjs/cli": "^7.0.0",
     "@nestjs/schematics": "^7.0.0",
     "@nestjs/testing": "^7.0.0",
