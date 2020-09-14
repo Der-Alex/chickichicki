@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ContentTypesController } from './content-types.controller';
-import { BaseContentTypeService } from './base-content-type.service';
-import { ContentTypeService } from './content-type.service';
+import { ContentTypesService } from './content-types.service';
 
 @Module({
-  providers: [BaseContentTypeService, ContentTypeService],
+  providers: [ContentTypesService],
   controllers: [ContentTypesController],
 })
 export class ContentTypesModule {}

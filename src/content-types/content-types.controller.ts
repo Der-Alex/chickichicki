@@ -1,19 +1,21 @@
-import { Controller, Get, Post } from '@nestjs/common';
-import { BaseContentTypeService } from './base-content-type.service';
-import { ContentTypeService } from './content-type.service';
-import { BaseContentTypeInterface } from './base-content-types/base-content-type.interface';
+import { Body, Controller, Get, Post, ValidationPipe } from '@nestjs/common';
+import { ContentTypesService } from './content-types.service';
+import { CreateContentTypeDto } from './dto/create-content-type.dto';
+import { BaseContentTypeInterface } from './base-content-types/interfaces/base-content-type.interface';
 
 @Controller('content-types')
 export class ContentTypesController {
-
-  constructor(private baseContentTypeService: BaseContentTypeService, private contentTypeService: ContentTypeService) {}
+  constructor(private contentTypeService: ContentTypesService) {}
 
   @Get()
-  async getAllBaseContentTypes() {
-    await this.baseContentTypeService.getAllBaseContentTypes();
+  async getAllBaseContentTypes(): Promise<{ [key: string]: BaseContentTypeInterface }> {
+    return this.contentTypeService.getAllBaseContentTypes();
   }
 
   @Post()
-  createContentType() {
+  async createContentType(
+    @Body(ValidationPipe) createContentTypeDto: CreateContentTypeDto,
+  ): Promise<BaseContentTypeInterface[]> {
+    return this.contentTypeService.createContentType(createContentTypeDto);
   }
 }
